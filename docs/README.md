@@ -39,10 +39,10 @@ The docker image contains the setup for the clarity tools. As the tools are deve
 * Blockstack CLI in `tools` directory
 ```
 RUN mkdir ~/tools
-RUN npm install --global git://github.com/blockstack/cli-blockstack.git#feature/stacks-2.0-tx --prefix ~/tools
+RUN npm install --global @stacks/cli --prefix ~/tools
 ``` 
 
-* Stacks node
+* Stacks node in `tools` directory
 ```
 RUN cd ~/tools; git clone https://github.com/blockstack/stacks-blockchain
 RUN cd ~/tools/stacks-blockchain/testnet/stacks-node;cargo install --bin stacks-node --path .;
